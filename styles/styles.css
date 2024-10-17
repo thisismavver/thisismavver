@@ -85,14 +85,13 @@ body {
     width: 100%;
     max-width: 408px;
     height: 50px;
-    flex: 1 1 95%; /* Позволяет кнопкам занимать 45% ширины контейнера */
-    max-width: 500px; /* Ограничивает максимальную ширину кнопок */
+    flex: 1 1 95%;
+    max-width: 500px;
     border-radius: 20px;
     border: 2px solid #2C2C2C;
     background-color: #222222;
     color: white;
     font-size: 20px;
-    font-weight: 200px;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
