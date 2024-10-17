@@ -2,6 +2,6 @@
 <img src="https://github.com/thisismavver/thisismavver/blob/main/images/main_image.jpg" height="32"/></h1>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+    <img src="https://skillicons.dev/icons?i=git,blender,cs,css,discord,dotnet,idea,py" />
   </a>
 </p>
