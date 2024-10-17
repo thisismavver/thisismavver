@@ -5,4 +5,4 @@
     <img src="https://skillicons.dev/icons?i=git,blender,cs,css,discord,dotnet,idea,py" />
   </a>
 </p>
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thisismavver&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
