@@ -38,7 +38,14 @@
 <div class="main-container">
     <div class="column profile-container">
         <a><img class="avatar" src="images/main_image.jpg" alt="main"></a>
-        <p class="font-Exo text-hello">Привет, это <span style="color: #ebbe1e; font-weight: 550;" id="name">mavver!</span></p>
+        <p class="font-Exo text-hello">Привет, это
+            <span
+                    class="name"
+                    style="color: #ebbe1e;
+                    font-weight: 550;"
+                    id="name">mavver!
+            </span>
+        </p>
         <p class="font-Exo text-about">Меня зовут Саша, я: <br>Программист, гений, миллиордер, плейбой, филантроп. <br>Разрабатываю проекты написанные на: Java, C#, Python, в частности Minecraft плагины, модификации.</p>
 
         <div class="button-row">
@@ -80,6 +87,37 @@
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
         mainContainer.style.transform = 'translateY(130px)';
     }
+    const textElement = document.querySelector('.name');
+    let colorIndex = 0;
+    let currentIndex = 0; // Индекс текущего цвета
+    const colors = [
+        '#FFFFFF',
+        '#C0C0C0',
+        '#000000'
+    ];
+
+    // Функция для получения следующего цвета
+    function getNextColor() {
+    const color = colors[currentIndex]; // Получаем текущий цвет
+
+    // Увеличиваем индекс
+    if (currentIndex < colors.length - 1) {
+        currentIndex++;
+    } else {
+        // Если достигли конца, начинаем возвращаться
+        currentIndex = 0; // Сбрасываем индекс для бесконечного цикла
+    }
+
+    return color;
+    }
+    function changeTextColor() {
+        textElement.style.color = getNextColor();
+        colorIndex = (colorIndex + 1) % colors.length; // Переход к следующему цвету
+    }
+
+
+// Изменяем цвет каждые 500 миллисекунд
+setInterval(changeTextColor, 100);
 </script>
 
 
