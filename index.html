@@ -78,21 +78,27 @@
       font-family: 'Brush Script MT', cursive;
       font-size: 28px;
       text-align: center;
-      line-height: 25px;
-      top: 19px;
-      right: 20px; /* Переместили текст в правую часть */
+      line-height: 1.2; /* Уменьшили межстрочный интервал */
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       color: #003049;
+      white-space: nowrap; /* Запрещаем перенос текста */
+    }
+
+    .text br {
+      display: block; /* Делаем перенос строки видимым */
     }
 
     .heart {
       background-color: #d62828;
       display: inline-block;
       height: 30px;
-      margin: 0 10px;
+      margin: 0 auto; /* Центрируем сердечко */
       position: absolute;
-      top: 110px;
-      left: 20px; /* Переместили сердечко в левую часть */
-      transform: rotate(-45deg);
+      top: 100px; /* Позиция под текстом */
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg); /* Центрируем и поворачиваем */
       width: 30px;
     }
 
@@ -259,7 +265,9 @@
       <div class="envelope"></div>
       <div class="front"></div>
       <div class="card">
-        <div class="text">С днём</br> святого</br> валентина, Маша!</div>
+        <div class="text">
+          С днём святого<br>валентина, Маша!
+        </div>
         <div class="heart"></div>
       </div>
       <div class="hearts">
