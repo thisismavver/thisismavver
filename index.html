@@ -1,32 +1,183 @@
-<div class="container">  
-<div class="valentines">
-  <div class="envelope"></div>
-  <div class="front"></div>
-  <div class="card">
-  <div class="text">Happy</br> Valentine</br> Day AYA</div>
-  <div class="heart"</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Card</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+
+    .valentines {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .envelope {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #e74c3c;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
+    }
+
+    .front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #c0392b;
+      clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+    }
+
+    .card {
+      position: absolute;
+      width: 90%;
+      height: 80%;
+      background-color: white;
+      top: 0;
+      left: 5%;
+      transition: top 0.5s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      color: #e74c3c;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background-color: #e74c3c;
+      position: absolute;
+      transform: rotate(-45deg);
+      bottom: 20px;
+      left: 50%;
+      margin-left: -10px;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: #e74c3c;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 10px;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .hearts div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #e74c3c;
+      border-radius: 50%;
+    }
+
+    .one {
+      top: 10%;
+      left: 20%;
+    }
+
+    .two {
+      top: 30%;
+      left: 50%;
+    }
+
+    .three {
+      top: 20%;
+      left: 80%;
+    }
+
+    .four {
+      top: 50%;
+      left: 10%;
+    }
+
+    .five {
+      top: 60%;
+      left: 70%;
+    }
+
+    .shadow {
+      width: 300px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="valentines">
+      <div class="envelope"></div>
+      <div class="front"></div>
+      <div class="card">
+        <div class="text">С днём</br> святого</br> валентина, Маша!</div>
+        <div class="heart"></div>
+      </div>
+      <div class="hearts">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+      </div>
+    </div>
+    <div class="shadow"></div>
   </div>
-  <div class="hearts">
-    <div class="one"></div>
-    <div class="two"></div>
-    <div class="three"></div>
-    <div class="four"></div>
-    <div class="five"></div>
-  </div>
-</div>
-</div>
-<div class="shadow"></div>
-</div>
-<Script>
-$(document).ready(function () {
-    $('.container').mouseenter(function () {
+
+  <script>
+    $(document).ready(function () {
+      $('.container').mouseenter(function () {
         $('.card').stop().animate({
-            top: '-90px'
+          top: '-90px'
         }, 'slow');
-    }).mouseleave(function () {
+      }).mouseleave(function () {
         $('.card').stop().animate({
-            top: 0
+          top: 0
         }, 'slow');
+      });
     });
-});
-</Script>
+  </script>
+</body>
+</html>
