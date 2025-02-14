@@ -1,124 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Страница маввера</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            display: flex;
-            justify-content: center; /* Центрирует содержимое по горизонтали */
-            align-items: center; /* Центрирует содержимое по вертикали */
-            height: 100vh; /* Занимает всю высоту экрана */
-            margin: 0;
-            background-color: #171717; /* Цвет фона */
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column; /* Устанавливает вертикальное направление */
-            align-items: center; /* Центрирует содержимое внутри контейнера */
-            width: 90%;
-            max-width: 72em;
-        }
-
-        .button-row {
-            display: flex;
-            justify-content: space-between; /* Распределяет кнопки по горизонтали */
-            gap: 20px; /* Расстояние между кнопками */
-            width: 100%; /* Занимает всю ширину родительского контейнера */
-        }
-    </style>
-</head>
-<body>
-<div class="header"></div>
-<div class="main-container">
-    <div class="column profile-container">
-        <a><img class="avatar" src="images/main_image.jpg" alt="main"></a>
-        <p class="font-Exo text-hello">Привет, это
-            <span
-                    class="name"
-                    style="color: #ebbe1e;
-                    font-weight: 550;"
-                    id="name">mavver!
-            </span>
-        </p>
-        <p class="font-Exo text-about">Меня зовут Саша, я: <br>Программист, гений, миллиордер, плейбой, филантроп. <br>Разрабатываю проекты написанные на: Java, C#, Python, в частности Minecraft плагины, модификации.</p>
-
-        <div class="button-row">
-            <a href="https://github.com/thisismavver" target="_blank" class="button-wide">
-                <img src="images/github.png" alt="GitHub" class="button-icon">
-                <span class="button-text">
-                    GitHub
-                    <span class="button-subtext">Проекты, коды, бла-бла.</span>
-                </span>
-            </a>
-            <a href="https://t.me/thismavver" target="_blank" class="button-wide">
-                <img src="images/telegram.png" alt="Соцсети" class="button-icon">
-                <span class="button-text">
-                    Telegram канал
-                    <span class="button-subtext">Личный телеграмм-канал филантропа</span>
-                </span>
-            </a>
-            <a href="https://steamcommunity.com/id/mvvr" target="_blank" class="button-wide">
-                <img src="images/steam.png" alt="Соцсети" class="button-icon">
-                <span class="button-text">
-                    Steam
-                    <span class="button-subtext">Во что играет мистер маввер?</span>
-                </span>
-            </a>
-            <a href="https://t.me/thisismavver" target="_blank" class="button-wide">
-                <img src="images/telegram.png" alt="Соцсети" class="button-icon">
-                <span class="button-text">
-                    Telegram
-                    <span class="button-subtext">Личный профиль мистера маввера</span>
-                </span>
-            </a>
-        </div>
-    </div>
+<div class="container">  
+<div class="valentines">
+  <div class="envelope"></div>
+  <div class="front"></div>
+  <div class="card">
+  <div class="text">Happy</br> Valentine</br> Day AYA</div>
+  <div class="heart"</div>
+  </div>
+  <div class="hearts">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+  </div>
 </div>
-</body>
-
-<script>
-    const mainContainer = document.querySelector('.main-container');
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        mainContainer.style.transform = 'translateY(130px)';
-    }
-    const textElement = document.querySelector('.name');
-    let colorIndex = 0;
-    let currentIndex = 0; // Индекс текущего цвета
-    const colors = [
-        '#FFFFFF',
-        '#C0C0C0',
-        '#000000'
-    ];
-
-    // Функция для получения следующего цвета
-    function getNextColor() {
-    const color = colors[currentIndex]; // Получаем текущий цвет
-
-    // Увеличиваем индекс
-    if (currentIndex < colors.length - 1) {
-        currentIndex++;
-    } else {
-        // Если достигли конца, начинаем возвращаться
-        currentIndex = 0; // Сбрасываем индекс для бесконечного цикла
-    }
-
-    return color;
-    }
-    function changeTextColor() {
-        textElement.style.color = getNextColor();
-        colorIndex = (colorIndex + 1) % colors.length; // Переход к следующему цвету
-    }
-
-
-// Изменяем цвет каждые 500 миллисекунд
-setInterval(changeTextColor, 100);
-</script>
-
-
-</html>
+</div>
+<div class="shadow"></div>
+</div>
